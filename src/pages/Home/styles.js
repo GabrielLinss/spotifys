@@ -34,8 +34,9 @@ export default StyleSheet.create({
     album: {
         backgroundColor: colors["secondary"],
         marginBottom: 20,
-        maxHeight: 110,
-        maxWidth: 110
+        maxHeight: 120,
+        maxWidth: 110,
+        marginRight: 20
     },
 
     detailsButton: {

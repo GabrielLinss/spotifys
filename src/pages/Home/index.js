@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import { Feather, Ionicons } from '@expo/vector-icons';
@@ -95,33 +95,47 @@ export default function Home() {
         <Text style={styles.title}>Tocadas recentemente</Text>
 
         <View style={styles.albumList}>
-          <View style={styles.album}>
-            <TouchableOpacity
-              style={styles.detailsButton}
-              onPress={() => {}}
-            >
-              <Image style={styles.image} source={albumImg2} />
-              <Text style={styles.detailsButtonText}>Forró</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.album}>
-            <TouchableOpacity
-              style={styles.detailsButton}
-              onPress={() => {}}
-            >
-              <Image style={styles.image} source={albumImg2} />
-              <Text style={styles.detailsButtonText}>Forro de Qualidade</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.album}>
-            <TouchableOpacity
-              style={styles.detailsButton}
-              onPress={() => {}}
-            >
-              <Image style={styles.image} source={albumImg2} />
-              <Text style={styles.detailsButtonText}>This Is Desejo De Menina</Text>
-            </TouchableOpacity>
-          </View>
+          <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{ paddingHorizontal: 0 }}>
+            <View style={styles.album}>
+              <TouchableOpacity
+                style={styles.detailsButton}
+                onPress={() => {}}
+              >
+                <Image style={styles.image} source={albumImg2} />
+                <Text style={styles.detailsButtonText}>Forró</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.album}>
+              <TouchableOpacity
+                style={styles.detailsButton}
+                onPress={() => {}}
+              >
+                <Image style={styles.image} source={albumImg2} />
+                <Text style={styles.detailsButtonText}>Forro de Qualidade</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.album}>
+              <TouchableOpacity
+                style={styles.detailsButton}
+                onPress={() => {}}
+              >
+                <Image style={styles.image} source={albumImg2} />
+                <Text style={styles.detailsButtonText}>This Is Desejo De Menina</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.album}>
+              <TouchableOpacity
+                style={styles.detailsButton}
+                onPress={() => {}}
+              >
+                <Image style={styles.image} source={albumImg2} />
+                <Text style={styles.detailsButtonText}>Xand Avião</Text>
+              </TouchableOpacity>
+            </View>
+          </ScrollView>
         </View>
 
         <View style={styles.player}>
